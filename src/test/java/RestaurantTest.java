@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 class RestaurantTest {
-    Restaurant restaurant = Mockito.mock(Restaurant.class);
+    Restaurant restaurant;
     //REFACTOR ALL THE REPEATED LINES OF CODE
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -17,6 +17,8 @@ class RestaurantTest {
     @Test
     public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time() {
         //WRITE UNIT TEST CASE HERE
+
+        Restaurant restaurant = Mockito.mock(Restaurant.class);
 
 
         restaurant.openingTime = LocalTime.now().minusHours(3);
@@ -30,7 +32,7 @@ class RestaurantTest {
     @Test
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time() {
         //WRITE UNIT TEST CASE HERE
-
+        restaurant = Mockito.mock(Restaurant.class);
 
         restaurant.openingTime = LocalTime.now().plusHours(2);
         restaurant.closingTime = LocalTime.now().plusHours(5);

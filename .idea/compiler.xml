@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Restaurant_project -Student version" />
+        <module name="Restaurant_project -Student version - Copy (3)" />
         <module name="Restaurant_project" />
-        <module name="Restaurant_project -Student version - Copy" />
       </profile>
     </annotationProcessing>
   </component>
